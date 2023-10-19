@@ -7,7 +7,7 @@
 
 using namespace std;
 
-int countCharacter(string str);
+int countVowel(string str);
 
 int main(void)
 {
@@ -15,12 +15,32 @@ int main(void)
 	string str;
 	getline(cin, str);
 
-	cout << endl << countCharacter(str) << endl;
+	cout << endl << countVowel(str) << endl;
 
 	return 0;
 }
 
-int countCharacter(string str)
+int countVowel(string str)
 {
-	return str.length();
+	int vowels = 0;
+
+	for (int i = 0; i < str.length(); i++)
+	{
+		switch (str[i])
+		{
+		case 'a': vowels++; break;
+		case 'e': vowels++; break;
+		case 'i': vowels++; break;
+		case 'o': vowels++; break;
+		case 'u': vowels++; break;
+		case 'A': vowels++; break;
+		case 'E': vowels++; break;
+		case 'I': vowels++; break;
+		case 'O': vowels++; break;
+		case 'U': vowels++; break;
+		default: break;
+		}
+	}
+	
+	return vowels;
 }
