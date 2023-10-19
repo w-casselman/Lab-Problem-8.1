@@ -11,11 +11,19 @@ int countVowel(string str);
 
 int main(void)
 {
-	cout << "Enter string: ";
-	string str;
-	getline(cin, str);
+	while (true)
+	{
+		cout << "Enter a string or Q to quit: ";
+		string str;
+		getline(cin, str);
 
-	cout << endl << countVowel(str) << endl;
+		if (str == "Q")
+		{
+			break;
+		}
+
+		cout << "Vowel count: " << countVowel(str) << endl;
+	}
 
 	return 0;
 }
